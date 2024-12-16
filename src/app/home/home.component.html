@@ -1,0 +1,18 @@
+<h2>Piatto della giornata</h2>
+
+<form id="searchForm" (ngSubmit)="searchMeal()">
+    <label for="MealName">Pietanza : </label>
+    <input type="text" id="MealName" [(ngModel)]="mealInput" name="Name" />
+    <button type="submit">Cerca</button>
+</form>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 text-center mt-5">
+            <h3>Piatto:</h3>
+            <p>{{myMeal.meals?.[0]?.strMeal}}</p>
+            <p>{{myMeal.meals?.[0]?.strInstructions}}</p>
+            <img [src]="myMeal.meals?.[0]?.strMealThumb" alt="{{myMeal.meals?.[0]?.strMealThumb}}">
+        </div>
+    </div>
+</div>
